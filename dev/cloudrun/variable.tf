@@ -8,10 +8,7 @@ variable "service_name" {
   type        = string
   default = "test-nginx"
 }
-variable "credentials" {
-   default = "key.json"
-  
-}
+
 
 variable "location" {
   description = "Cloud Run service deployment location"
@@ -80,7 +77,7 @@ variable "container_concurrency" {
   description = "Concurrent request limits to the service"
   default     = 10
 }
-variable "timeout_seconds" {
+variable "  " {
   type        = number
   description = "Timeout for each request"
   default     = 120
@@ -111,5 +108,5 @@ variable "ports" {
 variable "members" {
   type        = list(string)
   description = "Users/SAs to be given invoker access to the service"
-  default     = ["serviceAccount:test-svc-gateway@apigeeproject-391817.iam.gserviceaccount.com"]
+  default     = [ ]
 }
