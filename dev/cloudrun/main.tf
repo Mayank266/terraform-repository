@@ -11,7 +11,7 @@ module "cloud-run" {
   service_labels = var.service_labels
   service_annotations = var.service_annotations
   template_annotations = var.template_annotations
-  encryption_key = var.encryption_key
+  # encryption_key = var.encryption_key
   container_concurrency = var.container_concurrency
   timeout_seconds = var.timeout_seconds
   ports = var.ports

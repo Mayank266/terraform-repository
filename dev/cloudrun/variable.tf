@@ -67,17 +67,17 @@ variable "template_annotations" {
     "run.googleapis.com/vpc-access-egress" = "all-traffic"
   }
 }
-variable "encryption_key" {
-  description = "CMEK encryption key self-link expected in the format projects/PROJECT/locations/LOCATION/keyRings/KEY-RING/cryptoKeys/CRYPTO-KEY."
-  type        = string
-  default     = null
-}
+# variable "encryption_key" {
+#   description = "CMEK encryption key self-link expected in the format projects/PROJECT/locations/LOCATION/keyRings/KEY-RING/cryptoKeys/CRYPTO-KEY."
+#   type        = string
+#   default     = null
+# }
 variable "container_concurrency" {
   type        = number
   description = "Concurrent request limits to the service"
   default     = 10
 }
-variable "timeout_seconds" {
+variable "  " {
   type        = number
   description = "Timeout for each request"
   default     = 120
@@ -108,5 +108,5 @@ variable "ports" {
 variable "members" {
   type        = list(string)
   description = "Users/SAs to be given invoker access to the service"
-  default     = [ ]
+  default     = ["serviceAccount:test-svc-gateway@apigeeproject-391817.iam.gserviceaccount.com"]
 }
