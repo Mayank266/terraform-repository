@@ -1,0 +1,21 @@
+swagger: '2.0'
+info:
+  title: testapi-new 
+  description: Sample API on API Gateway with a Cloud Run backend
+  version: 1.0.0
+schemes:
+- https
+produces:
+- application/json
+x-google-backend:
+  address: https://test-nginx-anxfo46jua-uc.a.run.app   
+paths:
+  /:
+    get:
+      summary: Cloud Run hello world
+      operationId: hello
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
