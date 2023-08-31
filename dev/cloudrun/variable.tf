@@ -77,7 +77,7 @@ variable "container_concurrency" {
   description = "Concurrent request limits to the service"
   default     = 10
 }
-variable "  " {
+variable "timeout_seconds" {
   type        = number
   description = "Timeout for each request"
   default     = 120
